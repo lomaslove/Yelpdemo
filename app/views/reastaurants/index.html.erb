@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reastaurants</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Adress</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reastaurants.each do |reastaurant| %>
+      <tr>
+        <td><%= reastaurant.name %></td>
+        <td><%= reastaurant.adress %></td>
+        <td><%= reastaurant.phone %></td>
+        <td><%= reastaurant.website %></td>
+        <td><%= link_to 'Show', reastaurant %></td>
+        <td><%= link_to 'Edit', edit_reastaurant_path(reastaurant) %></td>
+        <td><%= link_to 'Destroy', reastaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reastaurant', new_reastaurant_path %>
