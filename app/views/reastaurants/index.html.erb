@@ -20,9 +20,9 @@
         <td><%= reastaurant.adress %></td>
         <td><%= reastaurant.phone %></td>
         <td><%= reastaurant.website %></td>
-        <td><%= link_to 'Show', reastaurant %></td>
-        <td><%= link_to 'Edit', edit_reastaurant_path(reastaurant) %></td>
-        <td><%= link_to 'Destroy', reastaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', reastaurant, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_reastaurant_path(reastaurant), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', reastaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Reastaurant', new_reastaurant_path %>
+<%= link_to 'New Reastaurant', new_reastaurant_path, class: "btn btn-link" %>

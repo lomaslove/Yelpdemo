@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @restaurant.image_url %>
+
 <p>
   <strong>Name:</strong>
   <%= @reastaurant.name %>
@@ -20,5 +22,5 @@
   <%= @reastaurant.website %>
 </p>
 
-<%= link_to 'Edit', edit_reastaurant_path(@reastaurant) %> |
-<%= link_to 'Back', reastaurants_path %>
+<%= link_to 'Edit', edit_reastaurant_path(@reastaurant), class: "btn btn-link" %> |
+<%= link_to 'Back', reastaurants_path, class: "btn btn-link" %>

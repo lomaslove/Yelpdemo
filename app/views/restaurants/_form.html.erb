@@ -1,4 +1,4 @@
-<%= form_with(model: restaurant, local: true) do |form| %>
+<%= form_with(model: restaurant, :html => { local: true}) do |form| %>
   <% if restaurant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
@@ -13,22 +13,27 @@
 
   <div class="form-group">
     <%= form.label :name %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="form-group">
     <%= form.label :adress %><br>
-    <%= form.text_field :adress %>
+    <%= form.text_field :adress, class: "form-control"%>
   </div>
 
   <div class="form-group">
     <%= form.label :phone %><br>
-    <%= form.text_field :phone %>
+    <%= form.text_field :phone , class: "form-control"%>
   </div>
 
   <div class="form-group">
     <%= form.label :website %><br>
-    <%= form.text_field :website %>
+    <%= form.text_field :website, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image %><br>
+    <%= form.file_field :image, class: "form-control" %>
   </div>
 
   <div class="actions">

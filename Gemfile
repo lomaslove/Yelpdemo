@@ -61,4 +61,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "sqlite3", "~> 1.3.6"
+gem "sqlite3", "~> 1.3.6", group: :development
+gem 'rails_12factor', group: :production
+gem 'pg', group: :production
+gem 'carrierwave'
+gem "fog-aws"
